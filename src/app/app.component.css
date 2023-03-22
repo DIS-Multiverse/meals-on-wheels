@@ -1,0 +1,13 @@
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 80% 10%;
+}
+
+/* TODO: Conditonally change dependent on Nav-bar open or closed */
+section {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+}
