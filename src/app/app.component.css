@@ -14,16 +14,14 @@ main {
   grid-template-rows: 10% 83% 7%;
 }
 
-/* TODO: Conditonally change dependent on Nav-bar open or closed */
-
 section {
   display: grid;
   grid-template-rows: 1fr;
 }
-.section-nav-open {
+.nav-bar-open {
   grid-template-columns: 15% 85%;
 }
 
-.section-nav-closed {
+.nav-bar-closed {
   grid-template-columns: 6% 94%;
 }

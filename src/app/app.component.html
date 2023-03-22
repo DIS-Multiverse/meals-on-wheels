@@ -1,7 +1,7 @@
 <main>
   <app-header></app-header>
-  <section class="section-nav-open">
-    <app-nav-bar></app-nav-bar>
+  <section class="{{ navOpen ? 'nav-bar-open' : 'nav-bar-closed' }}">
+    <app-nav-bar [navOpen]="navOpen" (toggleNavBar)="onToggleNavBar($event)"></app-nav-bar>
     <app-home-page></app-home-page>
     <!-- <router-outlet></router-outlet> -->
   </section>

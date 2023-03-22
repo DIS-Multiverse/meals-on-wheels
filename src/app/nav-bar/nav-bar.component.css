@@ -11,16 +11,13 @@ ul, span {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: #678D58;
 }
 
 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-li, .caret-right-icon {
-  color: #678D58;
 }
 
 li {
@@ -35,7 +32,7 @@ li {
   font-size: 2rem;
 }
 
-li:hover, .caret-right-icon:hover {
+li:hover, .caret-icon:hover {
   cursor: pointer;
   color: #49663e;
   text-decoration: underline;

@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'meals-on-wheels';
-  public navOpen: Boolean = true;
+  public navOpen: boolean = true;
+
+  public onToggleNavBar(event: boolean): void {
+    this.navOpen = event;
+  }
 }
