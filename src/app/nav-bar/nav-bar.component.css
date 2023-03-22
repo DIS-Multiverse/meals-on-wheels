@@ -11,7 +11,6 @@ ul, span {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: #678D58;
 }
 
 ul {
@@ -20,8 +19,8 @@ ul {
   list-style-type: none;
 }
 
-li {
-  font-size: large;
+.caret-icon {
+  color: #678D58;
 }
 
 .caret-right-icon {
@@ -29,12 +28,31 @@ li {
 }
 
 .caret-left-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
-li:hover, .caret-icon:hover {
+/* TODO: Adapt styling for small screens */
+
+a {
+  color: #678D58;
+  text-decoration: none;
+  font-size: large;
+  padding: 0.5em;
+}
+
+a:hover, .caret-icon:hover {
   cursor: pointer;
-  color: #49663e;
-  text-decoration: underline;
-  transition: 0.3s;
+  color: #49663E;
+  transition: ease-out 0.1s;
+}
+
+a:hover {
+  border: 2px solid #49663E;
+  border-radius: 2em;
+}
+
+.nav-link-active {
+  color: #49663E;
+  border: 2px solid #49663E;
+  border-radius: 2em;
 }

@@ -1,11 +1,25 @@
 <aside>
   <ul *ngIf="navOpen">
     <fa-icon (click)="onNavClick()" [icon]="caretLeftIcon" class=" caret-icon caret-left-icon"></fa-icon>
-    <li>Home</li>
-    <li>View Customers</li>
-    <li>Add Customer</li>
-    <li>View Meals</li>
-    <li>Add Meal</li>
+    <li>
+      <a 
+        routerLink="/"
+        routerLinkActive="nav-link-active" 
+        [routerLinkActiveOptions]="{exact: true}">Home
+      </a>
+    </li>
+    <li>
+      <a routerLink="/view-customers" routerLinkActive="nav-link-active">View Customers</a>
+    </li>
+    <li>
+      <a routerLink="/add-customer" routerLinkActive="nav-link-active">Add Customer</a>
+    </li>
+    <li>
+      <a routerLink="/view-meals" routerLinkActive="nav-link-active">View Meals</a>
+    </li>
+    <li>
+      <a routerLink="/add-meal" routerLinkActive="nav-link-active">Add Meal</a>
+    </li>
   </ul>
   <span *ngIf="!navOpen">
     <fa-icon (click)="onNavClick()" [icon]="caretRightIcon" class="caret-icon caret-right-icon"></fa-icon>
