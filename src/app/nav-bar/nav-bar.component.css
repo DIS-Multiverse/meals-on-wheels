@@ -1,0 +1,43 @@
+aside, ul, span {
+  height: 100%;
+}
+
+aside {
+  background-color: #A6C48A;
+}
+
+ul, span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li, .caret-right-icon {
+  color: #678D58;
+}
+
+li {
+  font-size: large;
+}
+
+.caret-right-icon {
+  font-size: 3rem;
+}
+
+.caret-left-icon {
+  font-size: 2rem;
+}
+
+li:hover, .caret-right-icon:hover {
+  cursor: pointer;
+  color: #49663e;
+  text-decoration: underline;
+  transition: 0.3s;
+}

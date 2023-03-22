@@ -1,13 +1,29 @@
+@font-face {
+  font-family: Vaz;
+  src: url(../assets/fonts/Vazirmatn-Regular.ttf) format('truetype');
+}
+
+* {
+  font-family: Vaz;
+}
+
 main {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 10% 83% 7%;
 }
 
 /* TODO: Conditonally change dependent on Nav-bar open or closed */
+
 section {
   display: grid;
-  grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr;
+}
+.section-nav-open {
+  grid-template-columns: 15% 85%;
+}
+
+.section-nav-closed {
+  grid-template-columns: 6% 94%;
 }

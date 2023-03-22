@@ -1,9 +1,13 @@
 <aside>
-  <ul>
+  <ul *ngIf="navOpen">
+    <li><fa-icon [icon]="caretLeftIcon" class="caret-left-icon"></fa-icon></li>
     <li>Home</li>
     <li>View Customers</li>
     <li>Add Customers</li>
     <li>View Meals</li>
     <li>Add Meal</li>
   </ul>
+  <span *ngIf="!navOpen">
+    <fa-icon [icon]="caretRightIcon" class="caret-right-icon"></fa-icon>
+  </span>
 </aside>
