@@ -1,33 +1,51 @@
 <aside>
   <ul *ngIf="navOpen">
-    <fa-icon [icon]="caretLeftIcon" class="caret-icon caret-left-icon" (click)="onNavClick()"></fa-icon>
+    <fa-icon
+      *ngIf="!smallScreen"
+      [icon]="caretLeftIcon"
+      class="caret-icon caret-left-icon"
+      (click)="onNavClick()"
+    ></fa-icon>
     <li>
-      
-      <a 
+      <a
         routerLink="/"
-        routerLinkActive="nav-link-active" 
-        [routerLinkActiveOptions]="{exact: true}">
-          <fa-icon [icon]="houseIcon" class="nav-link-icon"></fa-icon>Home
+        routerLinkActive="nav-link-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <fa-icon [icon]="houseIcon" class="nav-link-icon"></fa-icon>
+        <p *ngIf="!smallScreen" class="link-title">Home</p>
       </a>
     </li>
     <li>
       <a routerLink="/view-customers" routerLinkActive="nav-link-active">
-        <fa-icon [icon]="usersIcon" class="nav-link-icon"></fa-icon>View Customers</a>
+        <fa-icon [icon]="usersIcon" class="nav-link-icon"></fa-icon>
+        <p *ngIf="!smallScreen" class="link-title">View Customers</p>
+      </a>
     </li>
     <li>
       <a routerLink="/add-customer" routerLinkActive="nav-link-active">
-        <fa-icon [icon]="addUserIcon" class="nav-link-icon"></fa-icon>Add Customer</a>
+        <fa-icon [icon]="addUserIcon" class="nav-link-icon"></fa-icon>
+        <p *ngIf="!smallScreen" class="link-title">Add Customer</p>
+      </a>
     </li>
     <li>
       <a routerLink="/view-meals" routerLinkActive="nav-link-active">
-        <fa-icon [icon]="utensilsIcon" class="nav-link-icon"></fa-icon>View Meals</a>
+        <fa-icon [icon]="utensilsIcon" class="nav-link-icon"></fa-icon>
+        <p *ngIf="!smallScreen" class="link-title">View Meals</p>
+      </a>
     </li>
     <li>
       <a routerLink="/add-meal" routerLinkActive="nav-link-active">
-        <fa-icon [icon]="carrotIcon" class="nav-link-icon"></fa-icon>Add Meal</a>
+        <fa-icon [icon]="carrotIcon" class="nav-link-icon"></fa-icon>
+        <p *ngIf="!smallScreen" class="link-title">Add Meal</p>
+      </a>
     </li>
   </ul>
   <span *ngIf="!navOpen">
-    <fa-icon (click)="onNavClick()" [icon]="caretRightIcon" class="caret-icon caret-right-icon"></fa-icon>
+    <fa-icon
+      [icon]="caretRightIcon"
+      class="caret-icon caret-right-icon"
+      (click)="onNavClick()"
+    ></fa-icon>
   </span>
 </aside>

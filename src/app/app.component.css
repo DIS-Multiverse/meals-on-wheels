@@ -18,10 +18,18 @@ section {
   display: grid;
   grid-template-rows: 1fr;
 }
+
 .nav-bar-open {
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 18% 82%;
 }
 
 .nav-bar-closed {
   grid-template-columns: 6% 94%;
+}
+
+@media screen and (max-width: 1022px) {
+  #mainSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+  }
 }
