@@ -1,4 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { 
+  Component, 
+  Input, 
+  Output, 
+  EventEmitter, 
+  OnInit,
+  HostListener
+ } from '@angular/core';
 import { 
   faCaretRight, 
   faCaretLeft, 
@@ -14,9 +21,13 @@ import {
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
   @Input() navOpen!: boolean;
   @Output() toggleNavBar = new EventEmitter<boolean>();
+  public screenWidth!: Number;
+  public smallScreen!: boolean;
+
+  // Icons
   public caretRightIcon = faCaretRight;
   public caretLeftIcon = faCaretLeft;
   public houseIcon = faHouse;
@@ -24,6 +35,27 @@ export class NavBarComponent {
   public addUserIcon = faUserPlus;
   public utensilsIcon = faUtensils;
   public carrotIcon = faCarrot;
+
+  public ngOnInit(): void {
+    this.screenWidth = window.innerWidth;
+    this.setSmallScreen();
+  }
+
+  @HostListener('window:resize', ['$event'])  
+  onResize() {  
+    this.screenWidth = window.innerWidth;
+    this.setSmallScreen();  
+  } 
+  
+  private setSmallScreen(): void {
+    if (this.screenWidth < 1023) {
+      this.smallScreen = true;
+      this.navOpen = true;
+      this.toggleNavBar.emit(this.navOpen);
+    } else {
+      this.smallScreen = false;
+    }
+  }
 
   public onNavClick() {
     this.navOpen = !this.navOpen;
