@@ -1,46 +1,49 @@
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  height: 100%;
   background-color: #A6C48A;
+  min-height: 100%;
 }
 
-.contact {
+.contact-details, .developers {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.phone, .email, .social {
-  display: flex;
-  align-items: center;
+.contact-details {
+  width: 75%;
+  margin-top: 10px;
 }
 
-.phone-number, .email-address {
-  font-weight: bold;
-  margin-right: 10px;
+.developer-details {
+  width: 20%;
 }
 
-.social-link {
-  font-size: 24px;
-  color: #fff;
-  margin-right: 10px;
+.social-links > * {
+  color: #49663E;
+  font-size: 1.2em;
+  margin: 2px;
 }
 
-.makers {
-  text-align: right;
-}
-
-.makers ul {
-  list-style-type: none;
+h5 {
+  text-align: center;
   margin: 0;
-  padding: 0;
+  color: #49663E;
 }
 
-.maker-name {
-  font-weight: bold;
-  margin-left: 10px;
+p {
+  color: #678D58;
+  font-size: 0.9em;
 }
 
+a {
+  text-decoration: none;
+  color: #678D58;
+}
+
+.developer {
+  margin: 3px;
+}

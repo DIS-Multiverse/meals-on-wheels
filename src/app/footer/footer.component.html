@@ -1,28 +1,27 @@
 <footer>
-  <div class="contact">
-    <p>Contact Us:</p>
-    <div class="phone">
-      <p>Phone: <span class="phone-number">555-555-5555</span></p>
+  <div class="contact-details">
+    <div>
+      <h5>Phone:</h5>
+      <p>555-555-5555</p>
     </div>
-    <div class="social">
-      <fa-icon [icon]="facebookIcon" class="icon"></fa-icon>
-      <fa-icon [icon]="instagramIcon" class="icon"></fa-icon>
-      <fa-icon [icon]="githubIcon" class="icon"></fa-icon>
-      <fa-icon [icon]="linkedInIcon" class="icon"></fa-icon>
-      <fa-icon [icon]="twitterIcon" class="icon"></fa-icon>
+    <div class="social-links">
+      <a href="https://facebook.com/" target="_blank"><fa-icon [icon]="facebookIcon" class="icon"></fa-icon></a>
+      <a href="https://www.instagram.com/" target="_blank"><fa-icon [icon]="instagramIcon" class="icon"></fa-icon></a>
+      <a href="https://github.com/DIS-Multiverse" target="_blank"><fa-icon [icon]="githubIcon" class="icon"></fa-icon></a>
+      <a href="https://www.linkedin.com/company/linkedin" target="_blank"><fa-icon [icon]="linkedInIcon" class="icon"></fa-icon></a>
+      <a href="https://twitter.com/" target="_blank"><fa-icon [icon]="twitterIcon" class="icon"></fa-icon></a>
     </div>
-    <div class="email">
-      <p>Email: <a href="mailto:example@gmail.com" class="email-address">example@gmail.com</a></p>
+    <div>
+      <h5>Email:</h5>
+      <p><a href="mailto:example@gmail.com">example@gmail.com</a></p>
     </div>
   </div>
-  <div class="makers">
-    <p>Made by:</p>
-    <ul>
-      <li><span class="maker-name">Daniel</span></li>
-      <li><span class="maker-name">Imran</span></li>
-      <li><span class="maker-name">Stacey</span></li>
-    </ul>
+  <div class="developer-details">
+    <h5 class="heading">Created by:</h5>
+    <div class="developers">
+      <p class="developer">Daniel</p>
+      <p class="developer">Imran</p>
+      <p class="developer">Stacey</p>
+    </div>
   </div>
 </footer>
-
-
