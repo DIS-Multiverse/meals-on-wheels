@@ -1,6 +1,6 @@
 <aside>
   <ul *ngIf="navOpen">
-    <fa-icon (click)="onNavClick()" [icon]="caretLeftIcon" class=" caret-icon caret-left-icon"></fa-icon>
+    <fa-icon [icon]="caretLeftIcon" class="caret-icon caret-left-icon" (click)="onNavClick()"></fa-icon>
     <li>
       <a 
         routerLink="/"
