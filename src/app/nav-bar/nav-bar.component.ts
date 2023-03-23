@@ -1,5 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { faCaretRight, faCaretLeft } from '@fortawesome/free-solid-svg-icons'
+import { 
+  faCaretRight, 
+  faCaretLeft, 
+  faHouse, 
+  faUsers, 
+  faUserPlus,
+  faUtensils,
+  faCarrot
+ } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,6 +19,11 @@ export class NavBarComponent {
   @Output() toggleNavBar = new EventEmitter<boolean>();
   public caretRightIcon = faCaretRight;
   public caretLeftIcon = faCaretLeft;
+  public houseIcon = faHouse;
+  public usersIcon = faUsers;
+  public addUserIcon = faUserPlus;
+  public utensilsIcon = faUtensils;
+  public carrotIcon = faCarrot;
 
   public onNavClick() {
     this.navOpen = !this.navOpen;

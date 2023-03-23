@@ -2,23 +2,29 @@
   <ul *ngIf="navOpen">
     <fa-icon [icon]="caretLeftIcon" class="caret-icon caret-left-icon" (click)="onNavClick()"></fa-icon>
     <li>
+      
       <a 
         routerLink="/"
         routerLinkActive="nav-link-active" 
-        [routerLinkActiveOptions]="{exact: true}">Home
+        [routerLinkActiveOptions]="{exact: true}">
+          <fa-icon [icon]="houseIcon" class="nav-link-icon"></fa-icon>Home
       </a>
     </li>
     <li>
-      <a routerLink="/view-customers" routerLinkActive="nav-link-active">View Customers</a>
+      <a routerLink="/view-customers" routerLinkActive="nav-link-active">
+        <fa-icon [icon]="usersIcon" class="nav-link-icon"></fa-icon>View Customers</a>
     </li>
     <li>
-      <a routerLink="/add-customer" routerLinkActive="nav-link-active">Add Customer</a>
+      <a routerLink="/add-customer" routerLinkActive="nav-link-active">
+        <fa-icon [icon]="addUserIcon" class="nav-link-icon"></fa-icon>Add Customer</a>
     </li>
     <li>
-      <a routerLink="/view-meals" routerLinkActive="nav-link-active">View Meals</a>
+      <a routerLink="/view-meals" routerLinkActive="nav-link-active">
+        <fa-icon [icon]="utensilsIcon" class="nav-link-icon"></fa-icon>View Meals</a>
     </li>
     <li>
-      <a routerLink="/add-meal" routerLinkActive="nav-link-active">Add Meal</a>
+      <a routerLink="/add-meal" routerLinkActive="nav-link-active">
+        <fa-icon [icon]="carrotIcon" class="nav-link-icon"></fa-icon>Add Meal</a>
     </li>
   </ul>
   <span *ngIf="!navOpen">
