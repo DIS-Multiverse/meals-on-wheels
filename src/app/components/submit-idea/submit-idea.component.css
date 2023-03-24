@@ -1,0 +1,20 @@
+.container {
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #DD9787;
+  color: #1A2418;
+  box-shadow: 1px 1px 3px #52322B;
+}
+
+h3 {
+  margin: 5px 0;
+}
+
+textarea {
+  max-width: 80%;
+  min-width: 80%;
+}
+
+button {
+  display: block;
+}
