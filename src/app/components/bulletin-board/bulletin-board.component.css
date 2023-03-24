@@ -1,0 +1,31 @@
+.container {
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #396856;
+  color: #1A2418;
+  box-shadow: 1px 1px 3px #1A2418;
+}
+
+.bulletins-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bulletin {
+  margin: 10px;
+}
+
+h3 {
+  margin: 5px 0;
+
+}
+
+h4 {
+  margin: 0 0 3px;
+
+}
+
+a {
+  text-decoration: none;
+  color: #74D3AE;
+}

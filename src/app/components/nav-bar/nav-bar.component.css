@@ -4,6 +4,7 @@ aside, ul, span {
 
 aside {
   background-color: #A6C48A;
+  box-shadow: 1px 0 3px #678D58;
 }
 
 ul, span {
