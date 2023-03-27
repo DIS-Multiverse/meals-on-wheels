@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faMedal } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-meal-of-month',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./meal-of-month.component.css']
 })
 export class MealOfMonthComponent {
-
+  public medalicon = faMedal;
 }
