@@ -18,12 +18,13 @@ header {
 }
 
 .icon {
-  font-size: 2em;
+  font-size: 2rem;
   margin: 2px;
 }
 
 h1 {
   font-family: Oleo-Bold;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -33,15 +34,19 @@ p {
 }
 
 @media screen and (max-width: 800px) {
-  .icon {
-    font-size: 1.6em;
+  #logo {
+    margin: 10px;
   }
-  
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
   h1 {
-    font-size: 1.4em;
+    font-size: 1.5rem;
   }
   
   p {
-    font-size: 0.7em;
+    font-size: 0.8rem;
   }
 }

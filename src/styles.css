@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+  font-family: Vaz;
+  src: url(./assets/fonts/Vazirmatn-Regular.ttf) format('truetype');
+}
+
+* {
+  font-family: Vaz;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -6,4 +17,20 @@ body {
 
 p {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border-radius: 10px;
+  margin: 10px 2px;
+  padding: 7px;
+  border: 2px solid;
+  border-radius: 2em;
+}
+
+button:hover {
+  transition: ease-out 0.1s;
 }

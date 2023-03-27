@@ -8,6 +8,11 @@
 
 h3 {
   margin: 5px 0;
+  font-size: 1.4rem;
+}
+
+.form-group {
+  padding: 10px 0;
 }
 
 textarea {
@@ -15,6 +20,14 @@ textarea {
   min-width: 80%;
 }
 
-button, label {
-  display: block;
+button {
+  color:  #52322B   ;
+  background-color: #F6E7CB;
+  border-color: #52322B;
+}
+
+button:hover {
+  color:  #F6E7CB;
+  background-color: #52322B;
+  border-color: #52322B;
 }

@@ -11,22 +11,21 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+h3 {
+  margin: 5px 0;
+  font-size: 1.4rem;
+}
+
 .bulletin {
   margin: 10px;
 }
 
-h3 {
-  margin: 5px 0;
-
-}
-
 h4 {
   margin: 0 0 3px;
-
+  font-size: 1.2rem;
 }
 
-a {
-  text-decoration: none;
+.bulletin-link {
   color: #74D3AE;
 }
 
