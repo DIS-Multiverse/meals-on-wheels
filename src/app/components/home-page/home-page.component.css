@@ -42,6 +42,7 @@ article {
 h2 {
   color: #396856;
   font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .welcome-sub-container > p {
