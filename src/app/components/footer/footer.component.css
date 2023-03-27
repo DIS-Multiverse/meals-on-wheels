@@ -30,20 +30,21 @@ footer {
 
 .social-links > * {
   color: #49663E;
-  font-size: 1.2em;
   margin: 2px;
+  font-size: 1.2rem;
 }
 
 h5 {
   text-align: center;
   margin: 0;
   color: #49663E;
+  font-size: 1rem;
 }
 
 p {
   color: #678D58;
-  font-size: 0.9em;
   text-align: center;
+  font-size: 0.8rem;
 }
 
 a {
@@ -57,8 +58,16 @@ a {
 
 
 @media screen and (max-width: 1022px) {
+  .social-links > * {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
   p {
-    font-size: 0.7em;
+    font-size: 0.7rem;
   }
 
   .contact-details {

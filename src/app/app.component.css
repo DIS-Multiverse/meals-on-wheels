@@ -1,12 +1,3 @@
-@font-face {
-  font-family: Vaz;
-  src: url(../assets/fonts/Vazirmatn-Regular.ttf) format('truetype');
-}
-
-* {
-  font-family: Vaz;
-}
-
 main {
   display: grid;
   grid-template-rows: 1fr 7fr 1fr;
