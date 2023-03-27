@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faPepperHot } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-submit-idea',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./submit-idea.component.css']
 })
 export class SubmitIdeaComponent {
-
+  public pepperIcon = faPepperHot;
 }

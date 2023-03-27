@@ -29,3 +29,10 @@ a {
   text-decoration: none;
   color: #74D3AE;
 }
+
+@media screen and (max-width: 600px) {
+  .bulletins-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

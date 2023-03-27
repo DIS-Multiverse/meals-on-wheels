@@ -33,6 +33,10 @@ section {
 @media screen and (max-width: 1022px) {
   #mainSection {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 9.2fr;
+    grid-template-rows: 0.6fr 9.4fr;
+  }
+
+  .router-content {
+    padding: 15px;
   }
 }

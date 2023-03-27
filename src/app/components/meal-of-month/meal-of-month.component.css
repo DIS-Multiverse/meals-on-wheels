@@ -16,8 +16,6 @@
   margin-left: 15px;
 } 
 
-/* TODO: Set responsive img sizing */
-
 #momImg {
   width: 55%; 
   box-shadow: 1px 1px 3px #52322B;
@@ -34,4 +32,21 @@ h4 {
 
 .description, .stats {
   margin-top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .img-and-titles {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #momImg {
+    width: 90%; 
+  }
+
+  .titles-and-stats {
+    margin-left: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
 }
