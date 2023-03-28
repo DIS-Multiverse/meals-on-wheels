@@ -19,13 +19,13 @@
     <label>Address:</label>
     <input type="text" class="form-control" placeholder="Address" />
   </div>
-  <div class="form-group">
+  <div class="form-group age">
     <label>Age:</label>
     <input type="number" class="form-control" placeholder="Age" />
   </div>
   <div class="form-group">
     <label>Allergies:</label>
-    <div class="allergy-check-boxes">
+    <div class="check-boxes">
       <div *ngFor="let allergy of allergies" class="form-check">
         <input class="form-check-input" type="checkbox" />
         <label class="form-check-label">
@@ -35,10 +35,16 @@
     </div>
   </div>
   <div class="form-group">
-    <label>Assign a Meal:</label>
-    <select class="form-select">
-      <option *ngFor="let meal of meals">{{ meal }}</option>
-    </select>
+    <label>Conditions:</label>
+    <small>Select all relevant options</small>
+    <div class="check-boxes">
+      <div *ngFor="let conditon of conditions" class="form-check">
+        <input class="form-check-input" type="checkbox" />
+        <label class="form-check-label">
+          {{ conditon }}
+        </label>
+      </div>
+    </div>
   </div>
   <button type="submit">Submit</button>
 </form>

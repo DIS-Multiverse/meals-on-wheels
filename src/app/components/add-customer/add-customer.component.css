@@ -26,18 +26,15 @@ button:hover {
   border-color: #396856;
 }
 
-.allergy-check-boxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.age {
+  width: 6em;
 }
 
 .form-check {
   margin: 5px 10px;
 }
 
-@media screen and (max-width: 600px) {
-  .allergy-check-boxes {
-    display: flex;
-    flex-direction: column;
-  }
+small {
+  display: block;
+  margin: 5px 0;
 }

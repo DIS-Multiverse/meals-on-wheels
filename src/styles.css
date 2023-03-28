@@ -47,3 +47,15 @@ button:hover {
 .form-group {
   padding: 10px 0;
 }
+
+.check-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  .check-boxes {
+    display: flex;
+    flex-direction: column;
+  }
+}
