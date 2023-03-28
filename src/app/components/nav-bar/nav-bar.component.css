@@ -3,8 +3,14 @@ aside, ul, span {
 }
 
 aside {
-  background-color: #A6C48A;
-  box-shadow: 1px 0 3px #678D58;
+  background-color: #4A856E;
+  color: #243121;
+  box-shadow: 1px 0 3px #67BB9B;
+}
+
+.caret-left-container {
+  padding-top: 20px;
+  text-align: center;
 }
 
 ul, span {
@@ -20,10 +26,6 @@ ul {
   list-style-type: none;
 }
 
-.caret-icon {
-  color: #678D58;
-}
-
 .caret-right-icon {
   font-size: 3rem;
 }
@@ -33,26 +35,33 @@ ul {
 }
 
 a {
-  color: #678D58;
+  color: #243121;
   text-decoration: none;
   font-size: large;
   padding: 0.5em;
 }
 
-a:hover, .caret-icon:hover {
+.caret-icon:hover {
   cursor: pointer;
-  color: #49663E;
-  transition: ease-out 0.1s;
+  transition: ease-in-out 0.1s;
 }
 
 a:hover {
-  border: 2px solid #49663E;
+  border: 2px solid #243121;
   border-radius: 2em;
 }
 
+.caret-right-icon:hover {
+  color: #67BB9B;
+  font-size: 3.8rem;
+}
+
+.caret-left-icon:hover {
+  color: #67BB9B;
+}
+
 .nav-link-active {
-  color: #49663E;
-  border: 2px solid #49663E;
+  border: 2px solid #243121;
   border-radius: 2em;
 }
 
@@ -72,6 +81,7 @@ p {
   }
 
   .nav-link-active {
+    color: #67BB9B;
     border: none !important;
   }
 }

@@ -1,7 +1,5 @@
-.container {
-  padding: 15px;
-  border-radius: 30px;
-  background-color: #F6E7CB;
+.home-container {
+  background-color: #F1EADB;
   color: #52322B;
   box-shadow: 1px 1px 3px #B1A283;
 }

@@ -1,10 +1,11 @@
 footer {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #A6C48A;
-  height: 100%;
+  background-color: #4A856E;
+  color: #243121;
 }
 
 .contact-details, .developers {
@@ -29,7 +30,6 @@ footer {
 }
 
 .social-links > * {
-  color: #49663E;
   margin: 2px;
   font-size: 1.2rem;
 }
@@ -37,19 +37,17 @@ footer {
 h5 {
   text-align: center;
   margin: 0;
-  color: #49663E;
   font-size: 1rem;
 }
 
 p {
-  color: #678D58;
   text-align: center;
   font-size: 0.8rem;
 }
 
 a {
   text-decoration: none;
-  color: #678D58;
+  color: #243121;
 }
 
 .developer {

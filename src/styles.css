@@ -18,6 +18,7 @@ body {
 
 h2 {
   margin-bottom: 15px;
+  color: #4A856E;
 }
 
 h3 {
@@ -33,7 +34,6 @@ a {
 }
 
 button {
-  border-radius: 10px;
   margin: 10px 2px;
   padding: 7px;
   border: 2px solid;
@@ -44,12 +44,19 @@ button:hover {
   transition: ease-out 0.1s;
 }
 
+/* Shared Home Page styling */
+
+.home-container {
+  padding: 15px;
+  border-radius: 30px;
+}
+
 /* Shared Form Styling */
 
-.add-form {
+.add-edit-form {
   border-radius: 30px;
-  border: 2px solid #49663E;
-  color: #1A2418;
+  border: 2px solid #4A856E;
+  color: #243121;
   padding: 20px 25px;
 }
 
@@ -64,14 +71,24 @@ small {
 
 .form-button {
   color:  #396856;
-  background-color: #74D3AE;
+  background-color: #67BB9B;
   border-color: #396856;
 }
 
 .form-button:hover {
-  color:  #74D3AE;
+  color:  #67BB9B;
   background-color: #396856;
-  border-color: #396856;
+}
+
+.form-cancel-button {
+  color:   #52322B;
+  background-color: #F1EADB;
+  border-color:  #52322B;
+}
+
+.form-cancel-button:hover {
+  color:  #F1EADB;
+  background-color: #52322B;
 }
 
 .form-group {
@@ -86,6 +103,34 @@ small {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+/* Shared table styling */
+
+table {
+  width: 100%;
+  border: 2px solid #4A856E;
+}
+
+th {
+  color: #396856;
+  background-color: #67BB9B;
+}
+
+tbody {
+  border: 2px solid #4A856E;
+  color: #243121;
+  padding: 20px 25px;
+}
+
+th, td {
+  padding-left: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #FFFF;
+}
+  
+
 
 @media screen and (max-width: 600px) {
   .check-boxes {

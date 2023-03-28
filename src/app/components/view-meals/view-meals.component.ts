@@ -39,4 +39,8 @@ export class ViewMealsComponent {
     this.mealToEdit = undefined;
     this.getAllMeals();
   }
+
+  public onEditCancelled(): void {
+    this.mealToEdit = undefined;
+  }
 }
