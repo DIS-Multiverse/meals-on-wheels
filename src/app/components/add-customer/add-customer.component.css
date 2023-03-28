@@ -2,39 +2,6 @@ h2 {
   color: #49663E;
 }
 
-form {
-  border-radius: 30px;
-  border: 2px solid #49663E;
-  color: #1A2418;
-  padding: 20px 25px;
-}
-
-input, select {
-  border-radius: 2em;
-  background-color: #F5F5F4;
-}
-
-button {
-  color:  #396856;
-  background-color: #74D3AE;
-  border-color: #396856;
-}
-
-button:hover {
-  color:  #74D3AE;
-  background-color: #396856;
-  border-color: #396856;
-}
-
 .age {
   width: 6em;
-}
-
-.form-check {
-  margin: 5px 10px;
-}
-
-small {
-  display: block;
-  margin: 5px 0;
 }
