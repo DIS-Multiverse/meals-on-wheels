@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { faPencil } from '@fortawesome/free-solid-svg-icons'
+
+
 import { Meal } from 'src/app/models/meal';
 import { MealService } from 'src/app/services/meal.service';
 
@@ -10,6 +13,8 @@ import { MealService } from 'src/app/services/meal.service';
 export class EditMealComponent {
   @Input() meal!: Meal;
   @Output() mealUpdated = new EventEmitter<null>();
+  @Output() editCancelled = new EventEmitter<null>();
+  public pencilIcon = faPencil;
 
   constructor(private mealService: MealService) {}
 
@@ -17,5 +22,9 @@ export class EditMealComponent {
     this.mealService.updateMeal(this.meal!).subscribe(() => {
       this.mealUpdated.emit();
     });
+  }
+
+  public cancelUpdate(): void {
+    this.editCancelled.emit();
   }
 }

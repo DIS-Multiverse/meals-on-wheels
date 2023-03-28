@@ -29,24 +29,16 @@ article {
 
 /* Welcome Styling */
 
-.welcome-container {
-  border-radius: 30px;
-  background-color: #74D3AE;
-  box-shadow: 1px 1px 3px #396856;
-}
-
-.welcome-sub-container {
-  margin: 15px;
+.home-container {
+  background-color: #67BB9B;
+  box-shadow: 1px 1px 3px #4A856E;
+  color: #243121;
 }
 
 h2 {
-  color: #396856;
+  color: #243121;
   font-size: 1.8rem;
   font-weight: bold;
-}
-
-.welcome-sub-container > p {
-  color: #1A2418;
 }
 
 @media screen and (max-width: 1022px) {

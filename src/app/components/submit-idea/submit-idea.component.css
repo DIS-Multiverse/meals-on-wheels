@@ -1,9 +1,7 @@
-.container {
-  padding: 15px;
-  border-radius: 30px;
-  background-color: #DD9787;
-  color: #1A2418;
-  box-shadow: 1px 1px 3px #52322B;
+.home-container {
+  background-color: #4A856E;
+  color: #243121;
+  box-shadow: 1px 1px 3px #243121;
 }
 
 h3 {
@@ -15,19 +13,13 @@ label {
   margin: 5px 0;
 }
 
-/* textarea {
-  max-width: 100%;
-  min-width: 100%;
-} */
-
 button {
-  color:  #52322B   ;
-  background-color: #F6E7CB;
-  border-color: #52322B;
+  color:  #243121;
+  background-color: #67BB9B;
+  border-color: #243121;
 }
 
 button:hover {
-  color:  #F6E7CB;
-  background-color: #52322B;
-  border-color: #52322B;
+  color:  #67BB9B;
+  background-color: #243121;
 }

@@ -1,11 +1,16 @@
-<form>
+<h2>
+  <fa-icon [icon]="pencilIcon" class="nav-link-icon"></fa-icon> Edit
+  Meal
+</h2>
+<form class="add-edit-form">
   <div class="form-group">
     <label>Meal name:</label>
-    <input [(ngModel)]="meal.name" name="id" class="form-control" placeholder="Id"/>
+    <input [(ngModel)]="meal.name" name="id" class="form-control form-input" placeholder="Id"/>
   </div>
   <div class="form-group">
     <label>Ingredients:</label>
     <textarea [(ngModel)]="meal.ingredients" name="ingredients" class="form-control" placeholder="Ingredients"></textarea>
   </div>
-  <button type="submit" (click)="updateMeal()">Submit</button>
+  <button class="form-button" type="submit" (click)="updateMeal()">Submit</button>
+  <button class="form-cancel-button" (click)="cancelUpdate()">Cancel</button>
 </form>

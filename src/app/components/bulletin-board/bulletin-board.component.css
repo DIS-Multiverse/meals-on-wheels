@@ -1,9 +1,7 @@
-.container {
-  padding: 15px;
-  border-radius: 30px;
-  background-color: #396856;
-  color: #1A2418;
-  box-shadow: 1px 1px 3px #1A2418;
+.home-container{
+  background-color: #DD9787;
+  color: #52322B;
+  box-shadow: 1px 1px 3px #52322B;
 }
 
 .bulletins-container {
@@ -26,7 +24,8 @@ h4 {
 }
 
 .bulletin-link {
-  color: #74D3AE;
+  color: #243121;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
