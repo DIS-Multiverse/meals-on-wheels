@@ -11,11 +11,14 @@ h3 {
   font-size: 1.4rem;
 }
 
-textarea {
-  max-width: 80%;
-  min-width: 80%;
-  background-color: #F5F5F4;
+label {
+  margin: 5px 0;
 }
+
+/* textarea {
+  max-width: 100%;
+  min-width: 100%;
+} */
 
 button {
   color:  #52322B   ;

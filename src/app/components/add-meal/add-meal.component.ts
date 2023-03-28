@@ -13,4 +13,12 @@ export class AddMealComponent {
   public carrotIcon = faCarrot;
   public allergies: string[] = Allergies;
   public mealTypes: string[] = MealTypes;
+
+
+  
+  // createMeal(meal: Meal) {
+  //   this.mealService
+  //     .createMeal(meal)
+  //     .subscribe((meal) => this.mealUpdated.emit(meal));
+  // }
 }

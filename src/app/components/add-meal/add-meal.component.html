@@ -2,18 +2,18 @@
   <fa-icon [icon]="carrotIcon" class="nav-link-icon"></fa-icon> Create New
   Meal
 </h2>
-<form>
+<form class="add-form">
   <div class="form-group">
     <label>Meal name:</label>
-    <input type="text" class="form-control" placeholder="Enter email" />
+    <input type="text" class="form-control form-input" placeholder="Meal name" />
   </div>
   <div class="form-group">
     <label>Description:</label>
-    <textarea class="form-control"></textarea>
+    <textarea class="form-control form-input"></textarea>
   </div>
   <div class="form-group">
     <label>Ingredients:</label>
-    <textarea class="form-control"></textarea>
+    <textarea class="form-control form-input"></textarea>
   </div>
   <div class="form-group">
     <label>Allergens:</label>
@@ -38,5 +38,5 @@
       </div>
     </div>
   </div>
-  <button type="submit">Submit</button>
+  <button class="form-button" type="submit">Submit</button>
 </form>

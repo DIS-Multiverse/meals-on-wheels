@@ -1,1 +1,11 @@
-<p>edit-meal works!</p>
+<form>
+  <div class="form-group">
+    <label>Meal name:</label>
+    <input [(ngModel)]="meal.name" name="id" class="form-control" placeholder="Id"/>
+  </div>
+  <div class="form-group">
+    <label>Ingredients:</label>
+    <textarea [(ngModel)]="meal.ingredients" name="ingredients" class="form-control" placeholder="Ingredients"></textarea>
+  </div>
+  <button type="submit" (click)="updateMeal()">Submit</button>
+</form>
