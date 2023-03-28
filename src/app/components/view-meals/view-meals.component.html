@@ -1,1 +1,21 @@
-<p>view-meals works!</p>
+<button (click)="initNewMeal()">Create New Meal</button>
+
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Ingredients</th>
+    <th>Quantity</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let meal of meals">
+      <td>{{ meal.id }}</td>
+      <td>{{ meal.name }}</td>
+      <td>{{ meal.ingredients }}</td>
+      <td>{{ meal.quantity }}</td>
+      <td><button (click)="editMeal(meal)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<app-edit-meal [meal]="mealToEdit"></app-edit-meal>
