@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { AddMealComponent } from './components/add-meal/add-meal.component';
 import { MealOfMonthComponent } from './components/meal-of-month/meal-of-month.component';
 import { BulletinBoardComponent } from './components/bulletin-board/bulletin-board.component';
 import { SubmitIdeaComponent } from './components/submit-idea/submit-idea.component';
+import { EditMealComponent } from './components/edit-meal/edit-meal.component';
 
 
 @NgModule({
@@ -31,13 +33,15 @@ import { SubmitIdeaComponent } from './components/submit-idea/submit-idea.compon
     AddMealComponent,
     MealOfMonthComponent,
     BulletinBoardComponent,
-    SubmitIdeaComponent
+    SubmitIdeaComponent,
+    EditMealComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
