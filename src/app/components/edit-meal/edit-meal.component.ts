@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Meal } from 'src/app/models/meal';
 import { MealService } from 'src/app/services/meal.service';
 
@@ -7,29 +7,15 @@ import { MealService } from 'src/app/services/meal.service';
   templateUrl: './edit-meal.component.html',
   styleUrls: ['./edit-meal.component.css'],
 })
-export class EditMealComponent implements OnInit {
-  @Input() meal?: Meal;
-  @Output() mealUpdated = new EventEmitter<Meal[]>();
+export class EditMealComponent {
+  @Input() meal!: Meal;
+  @Output() mealUpdated = new EventEmitter<null>();
 
   constructor(private mealService: MealService) {}
 
-  ngOnInit(): void {}
-
-  updateMeal(meal: Meal) {
-    this.mealService
-      .updateMeal(meal)
-      .subscribe((meal) => this.mealUpdated.emit(meal));
-  }
-
-  deleteMeal(meal: Meal) {
-    this.mealService
-      .deleteMeal(meal)
-      .subscribe((meal) => this.mealUpdated.emit(meal));
-  }
-
-  createMeal(meal: Meal) {
-    this.mealService
-      .createMeal(meal)
-      .subscribe((meal) => this.mealUpdated.emit(meal));
+  public updateMeal(): void {
+    this.mealService.updateMeal(this.meal!).subscribe(() => {
+      this.mealUpdated.emit();
+    });
   }
 }

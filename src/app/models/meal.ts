@@ -1,6 +1,13 @@
 export class Meal {
-  id?: number;
-  name = "";
-  ingredients: String[] = []
-  quantity = 0;
+  id: number;
+  name: string;
+  ingredients: string[];
+
+  constructor(meal: Meal) {
+    {
+      this.id = meal.id;
+      this.name = meal.name || '';
+      this.ingredients = meal.ingredients || [];
+    }
+  }
 }

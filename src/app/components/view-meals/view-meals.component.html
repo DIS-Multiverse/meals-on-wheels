@@ -1,5 +1,3 @@
-<button (click)="initNewMeal()">Create New Meal</button>
-
 <table>
   <thead>
     <th>ID</th>
@@ -12,10 +10,22 @@
       <td>{{ meal.id }}</td>
       <td>{{ meal.name }}</td>
       <td>{{ meal.ingredients }}</td>
-      <td>{{ meal.quantity }}</td>
-      <td><button (click)="editMeal(meal)">Edit</button></td>
+      <td>
+        <button class="form-button" (click)="editMeal(meal)">
+          <fa-icon [icon]="pencilIcon"></fa-icon>
+        </button>
+      </td>
+      <td>
+        <button class="form-button" (click)="deleteMeal(meal)">
+          <fa-icon [icon]="trashIcon"></fa-icon>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
 
-<app-edit-meal [meal]="mealToEdit"></app-edit-meal>
+<app-edit-meal
+  *ngIf="mealToEdit"
+  [meal]="mealToEdit"
+  (mealUpdated)="onMealUpdated()"
+></app-edit-meal>

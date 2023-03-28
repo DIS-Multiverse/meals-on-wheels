@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faTrash, faPencil } from '@fortawesome/free-solid-svg-icons'
+
 import { Meal } from '../../models/meal';
 import { MealService } from '../../services/meal.service';
 
@@ -8,9 +10,10 @@ import { MealService } from '../../services/meal.service';
   styleUrls: ['./view-meals.component.css'],
 })
 export class ViewMealsComponent {
-  title = 'Mow.UI';
-  meals: Meal[] = [];
-  mealToEdit?: Meal;
+  public meals: Meal[] = [];
+  public mealToEdit: Meal | undefined;
+  public trashIcon = faTrash;
+  public pencilIcon = faPencil;
 
   constructor(private mealService: MealService) {}
 
@@ -18,19 +21,22 @@ export class ViewMealsComponent {
     this.getAllMeals();
   }
 
-  initNewMeal() {
-    this.mealToEdit = new Meal();
-    this.getAllMeals();
-  }
-
-  editMeal(meal: Meal) {
-    this.mealToEdit = meal;
-    this.getAllMeals();
-  }
-
-  getAllMeals(): void {
+  private getAllMeals(): void {
     this.mealService
       .getMeals()
       .subscribe((result: Meal[]) => (this.meals = result));
+  }
+
+  public editMeal(meal: Meal) {
+    this.mealToEdit = meal;
+  }
+
+  public deleteMeal(meal: Meal) {
+    this.mealService.deleteMeal(meal).subscribe(() => this.getAllMeals());
+  }
+
+  public onMealUpdated(): void {
+    this.mealToEdit = undefined;
+    this.getAllMeals();
   }
 }
