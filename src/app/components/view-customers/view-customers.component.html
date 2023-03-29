@@ -1,5 +1,4 @@
-<p>view-clients works!</p>
-<table>
+<table *ngIf="!userToEdit">
     <thead>
       <th>ID</th>
       <th>First Name</th>
@@ -9,9 +8,11 @@
       <th>Allergies</th>
       <th>Conditions</th>
       <th>Current Meal</th>
+      <th>Manage</th>
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
         <td>{{ user.firstName }}</td>
         <td>{{ user.lastName }}</td>
         <td>{{ user.address }}</td>
@@ -19,6 +20,20 @@
         <td>{{ user.allergies }}</td>
         <td>{{ user.conditions }}</td>
         <td>{{ user.currentMeal }}</td>
+        <td>
+          <button class="form-button" (click)="editUser(user)">
+            <fa-icon [icon]="pencilIcon"></fa-icon>
+          </button>
+          <button class="form-button" (click)="deleteUser(user)">
+            <fa-icon [icon]="trashIcon"></fa-icon>
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
+
+  <app-edit-user
+  *ngIf="userToEdit"
+  [user]="userToEdit"
+  (exitUserView)="onExitUserView()"
+></app-edit-user>

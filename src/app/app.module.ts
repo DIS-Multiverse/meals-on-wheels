@@ -18,6 +18,7 @@ import { MealOfMonthComponent } from './components/meal-of-month/meal-of-month.c
 import { BulletinBoardComponent } from './components/bulletin-board/bulletin-board.component';
 import { SubmitIdeaComponent } from './components/submit-idea/submit-idea.component';
 import { EditMealComponent } from './components/edit-meal/edit-meal.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { EditMealComponent } from './components/edit-meal/edit-meal.component';
     MealOfMonthComponent,
     BulletinBoardComponent,
     SubmitIdeaComponent,
-    EditMealComponent
+    EditMealComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
