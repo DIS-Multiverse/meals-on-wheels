@@ -53,7 +53,7 @@ button:hover {
 
 /* Shared Form Styling */
 
-.add-edit-form {
+.border-styling {
   border-radius: 30px;
   border: 2px solid #4A856E;
   color: #243121;
@@ -70,25 +70,31 @@ small {
 }
 
 .form-button {
-  color:  #396856;
+  color: #396856;
   background-color: #67BB9B;
   border-color: #396856;
 }
 
 .form-button:hover {
-  color:  #67BB9B;
+  color: #67BB9B;
   background-color: #396856;
 }
 
 .form-cancel-button {
-  color:   #52322B;
+  color:  #52322B;
   background-color: #F1EADB;
-  border-color:  #52322B;
+  border-color: #52322B;
 }
 
 .form-cancel-button:hover {
-  color:  #F1EADB;
+  color: #F1EADB;
   background-color: #52322B;
+}
+
+.disabled-button {
+  color: #BBBBB9;
+  background-color: #F5F5F4;
+  border-color: #BBBBB9;
 }
 
 .form-group {

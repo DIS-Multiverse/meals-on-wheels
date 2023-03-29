@@ -1,42 +1,80 @@
-<h2>
-  <fa-icon [icon]="carrotIcon" class="nav-link-icon"></fa-icon> Create New
-  Meal
-</h2>
-<form class="add-edit-form">
-  <div class="form-group">
-    <label>Meal name:</label>
-    <input type="text" class="form-control form-input" placeholder="Meal name" />
-  </div>
-  <div class="form-group">
-    <label>Description:</label>
-    <textarea class="form-control"></textarea>
-  </div>
-  <div class="form-group">
-    <label>Ingredients:</label>
-    <textarea class="form-control"></textarea>
-  </div>
-  <div class="form-group">
-    <label>Allergens:</label>
-    <div class="check-boxes">
-      <div *ngFor="let allergy of allergies" class="form-check">
-        <input class="form-check-input" type="checkbox" />
-        <label class="form-check-label">
-          {{ allergy }}
-        </label>
+<div *ngIf="!successView">
+  <h2>
+    <fa-icon [icon]="carrotIcon" class="nav-link-icon"></fa-icon> Create New
+    Meal
+  </h2>
+  <form (ngSubmit)="onSubmit()" #addMealForm="ngForm" class="border-styling">
+    <div class="form-group">
+      <label>*Meal name:</label>
+      <input
+        type="text"
+        class="form-control form-input"
+        placeholder="Meal name"
+        name="mealName"
+        #name="ngModel"
+        [(ngModel)]="mealName"
+        required
+      />
+      <small *ngIf="name.invalid && name.touched" class="invalid-message"
+        >Meal name is required</small
+      >
+    </div>
+    <div class="form-group">
+      <label>*Ingredients:</label>
+      <small>Seperate each ingredient with a comma and space</small>
+      <textarea
+        class="form-control"
+        name="ingredients"
+        #ingredients="ngModel"
+        [(ngModel)]="ingredientArr"
+        required
+      ></textarea>
+      <small
+        *ngIf="ingredients.invalid && ingredients.touched"
+        class="invalid-message"
+        >Ingredients are required</small
+      >
+    </div>
+    <div class="form-group">
+      <label>Description:</label>
+      <textarea class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Allergens:</label>
+      <div class="check-boxes">
+        <div *ngFor="let allergy of allergies" class="form-check">
+          <input class="form-check-input" type="checkbox" />
+          <label class="form-check-label">
+            {{ allergy }}
+          </label>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label>Meal Type:</label>
-    <small>Select all relevant options</small>
-    <div class="check-boxes">
-      <div *ngFor="let mealType of mealTypes" class="form-check">
-        <input class="form-check-input" type="checkbox" />
-        <label class="form-check-label">
-          {{ mealType }}
-        </label>
+    <div class="form-group">
+      <label>Meal Type:</label>
+      <small>Select all relevant options</small>
+      <div class="check-boxes">
+        <div *ngFor="let mealType of mealTypes" class="form-check">
+          <input class="form-check-input" type="checkbox" />
+          <label class="form-check-label">
+            {{ mealType }}
+          </label>
+        </div>
       </div>
     </div>
-  </div>
-  <button class="form-button" type="submit">Submit</button>
-</form>
+    <button
+      [ngClass]="{
+        'form-button': addMealForm.valid,
+        'disabled-button': !addMealForm.valid
+      }"
+      type="submit"
+      [disabled]="!addMealForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+<div *ngIf="successView" class="border-styling">
+  <p>Meal successfully added!</p>
+  <button class="form-button" (click)="onBackClick()">Back</button>
+</div>
