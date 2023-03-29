@@ -2,14 +2,14 @@
   <fa-icon [icon]="pencilIcon" class="nav-link-icon"></fa-icon> Edit
   Meal
 </h2>
-<form class="add-edit-form">
+<form class="border-styling">
   <div class="form-group">
     <label>Meal name:</label>
-    <input [(ngModel)]="meal.name" name="id" class="form-control form-input" placeholder="Id"/>
+    <input [(ngModel)]="meal.name" name="meal" class="form-control form-input"/>
   </div>
   <div class="form-group">
     <label>Ingredients:</label>
-    <textarea [(ngModel)]="meal.ingredients" name="ingredients" class="form-control" placeholder="Ingredients"></textarea>
+    <textarea [(ngModel)]="meal.ingredients" name="ingredients" class="form-control"></textarea>
   </div>
   <button class="form-button" type="submit" (click)="updateMeal()">Submit</button>
   <button class="form-cancel-button" (click)="cancelUpdate()">Cancel</button>
