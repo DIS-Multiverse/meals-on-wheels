@@ -35,12 +35,8 @@ export class ViewMealsComponent {
     this.mealService.deleteMeal(meal).subscribe(() => this.getAllMeals());
   }
 
-  public onMealUpdated(): void {
+  public onExitMealView(): void {
     this.mealToEdit = undefined;
     this.getAllMeals();
-  }
-
-  public onEditCancelled(): void {
-    this.mealToEdit = undefined;
   }
 }
