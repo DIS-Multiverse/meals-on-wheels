@@ -13,6 +13,7 @@ import { MealService } from '../../services/meal.service';
   styleUrls: ['./add-meal.component.css'],
 })
 export class AddMealComponent {
+  @ViewChild('addMealForm') form! : NgForm;
   public carrotIcon = faCarrot;
   public allergies: string[] = Allergies;
   public mealTypes: string[] = MealTypes;
@@ -20,6 +21,9 @@ export class AddMealComponent {
 
   public mealName!: string;
   public ingredientArr!: string[];
+  public mealDesc!: string;
+  public mealAllergens!: string[];
+  public newMealTypes!: string[];
 
   constructor(private mealService: MealService) {}
 
@@ -36,15 +40,14 @@ export class AddMealComponent {
     this.successView = false;
   }
 
+  public onClearClick(): void {
+    this.form.reset();
+  }
+
   private createMeal(meal: Meal) {
     this.mealService.createMeal(meal).subscribe(() => {
       this.successView = true;
-      this.clearForm();
+      this.form.reset()
     });
-  }
-
-  private clearForm(): void {
-    this.mealName = '';
-    this.ingredientArr = [];
   }
 }
