@@ -25,6 +25,5 @@
 <app-edit-meal
   *ngIf="mealToEdit"
   [meal]="mealToEdit"
-  (mealUpdated)="onMealUpdated()"
-  (editCancelled)="onEditCancelled()"
+  (exitMealView)="onExitMealView()"
 ></app-edit-meal>

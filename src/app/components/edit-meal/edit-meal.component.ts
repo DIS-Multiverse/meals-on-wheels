@@ -12,19 +12,18 @@ import { MealService } from 'src/app/services/meal.service';
 })
 export class EditMealComponent {
   @Input() meal!: Meal;
-  @Output() mealUpdated = new EventEmitter<null>();
-  @Output() editCancelled = new EventEmitter<null>();
+  @Output() exitMealView = new EventEmitter<null>();
   public pencilIcon = faPencil;
 
   constructor(private mealService: MealService) {}
 
   public updateMeal(): void {
     this.mealService.updateMeal(this.meal!).subscribe(() => {
-      this.mealUpdated.emit();
+      this.exitMealView.emit();
     });
   }
 
   public cancelUpdate(): void {
-    this.editCancelled.emit();
+    this.exitMealView.emit();
   }
 }
