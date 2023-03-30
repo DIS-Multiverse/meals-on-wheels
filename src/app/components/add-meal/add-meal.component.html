@@ -48,9 +48,15 @@
       <label>Allergens:</label>
       <div class="check-boxes">
         <div *ngFor="let allergy of allergies" class="form-check">
-          <input class="form-check-input" name="allergies" type="checkbox" value="{{allergy}}" ngModel/>
+          <input
+            class="form-check-input"
+            name="{{ allergy.name }}"
+            type="checkbox"
+            value="{{ allergy }}"
+            ngModel
+          />
           <label class="form-check-label">
-            {{ allergy }}
+            {{ allergy.name }}
           </label>
         </div>
       </div>
@@ -60,7 +66,13 @@
       <small>Select all relevant options</small>
       <div class="check-boxes">
         <div *ngFor="let mealType of mealTypes" class="form-check">
-          <input class="form-check-input" name="mealTypes" type="checkbox" value="{{mealType}}" ngModel/>
+          <input
+            class="form-check-input"
+            name="mealTypes"
+            type="checkbox"
+            value="{{ mealType }}"
+            ngModel
+          />
           <label class="form-check-label">
             {{ mealType }}
           </label>

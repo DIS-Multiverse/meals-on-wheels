@@ -1,8 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 import { User } from '../../models/users';
+import { Allergy } from '../../models/allergy';
 import { Allergies } from '../../models/allergies';
 import { Conditions } from '../../models/conditions';
 import { UserService } from '../../services/user.service';
@@ -16,7 +17,7 @@ import { UserService } from '../../services/user.service';
 export class AddCustomerComponent {
   @ViewChild('addUserForm') form!: NgForm;
   public addUserIcon = faUserPlus;
-  public allergies: string[] = Allergies;
+  public allergies: Allergy[] = Allergies;
   public conditions: string[] = Conditions;
   public successView: boolean = false;
 
@@ -24,6 +25,8 @@ export class AddCustomerComponent {
   public lastName!: string;
   public formAddress!: string;
   public formAge!: Number;
+  
+  private selectedAllergies: string[] = []
 
   constructor(private userService: UserService) {}
 
@@ -34,10 +37,23 @@ export class AddCustomerComponent {
         lastName: this.lastName,
         address: this.formAddress,
         age: this.formAge,
-        allergies: 'allergies',
+        allergies: this.selectedAllergies.join(' '),
         conditions: 'conditions',
       })
     );
+  }
+
+  public onAllergyChange(allergy: Allergy): void {
+    if (allergy.isSelected) {
+      this.selectedAllergies.push(allergy.name)
+    } else {
+      this.selectedAllergies.forEach((name, index) => {
+        if (name === allergy.name) {
+          this.selectedAllergies.splice(index, 1);
+        } 
+      })
+    }
+    console.log(this.selectedAllergies)
   }
 
   public onBackClick(): void {

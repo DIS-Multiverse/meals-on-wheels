@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { faCarrot } from '@fortawesome/free-solid-svg-icons';
 
 import { Allergies } from '../../models/allergies';
+import { Allergy } from 'src/app/models/allergy';
 import { MealTypes } from '../../models/meal-types';
 import { Meal } from '../../models/meal';
 import { MealService } from '../../services/meal.service';
@@ -15,7 +16,7 @@ import { MealService } from '../../services/meal.service';
 export class AddMealComponent {
   @ViewChild('addMealForm') form!: NgForm;
   public carrotIcon = faCarrot;
-  public allergies: string[] = Allergies;
+  public allergies: Allergy[] = Allergies;
   public mealTypes: string[] = MealTypes;
   public successView: boolean = false;
 
