@@ -5,3 +5,11 @@ h2 {
 .age {
   width: 6em;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.invalid-message {
+  color: red;
+}

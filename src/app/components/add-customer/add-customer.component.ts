@@ -18,6 +18,7 @@ export class AddCustomerComponent {
   public addUserIcon = faUserPlus;
   public allergies: string[] = Allergies;
   public conditions: string[] = Conditions;
+  public successView: boolean = false;
 
   public firstName!: string;
   public lastName!: string;
@@ -39,10 +40,17 @@ export class AddCustomerComponent {
     );
   }
 
+  public onBackClick(): void {
+    this.successView = false;
+  }
+
+  public onClearClick(): void {
+    this.form.reset();
+  }
+
   private createUser(user: User) {
     this.userService.createUser(user).subscribe(() => {
-      // this.successView = true;
-      console.log('form submitted');
+      this.successView = true;
       this.form.reset();
     });
   }
