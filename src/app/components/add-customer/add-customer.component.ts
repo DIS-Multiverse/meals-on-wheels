@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 import { User } from '../../models/users';
 import { Allergy } from '../../models/allergy';
 import { Allergies } from '../../models/allergies';
+import { Condition } from 'src/app/models/condition';
 import { Conditions } from '../../models/conditions';
 import { UserService } from '../../services/user.service';
 
@@ -16,17 +17,18 @@ import { UserService } from '../../services/user.service';
 })
 export class AddCustomerComponent {
   @ViewChild('addUserForm') form!: NgForm;
+  public successView: boolean = false;
   public addUserIcon = faUserPlus;
   public allergies: Allergy[] = Allergies;
-  public conditions: string[] = Conditions;
-  public successView: boolean = false;
-
+  public conditions: Condition[] = Conditions;
+  
   public firstName!: string;
   public lastName!: string;
   public formAddress!: string;
   public formAge!: Number;
-  
-  private selectedAllergies: string[] = []
+
+  private selectedAllergies: string[] = [];
+  private selectedConditions: string[] = [];
 
   constructor(private userService: UserService) {}
 
@@ -38,22 +40,34 @@ export class AddCustomerComponent {
         address: this.formAddress,
         age: this.formAge,
         allergies: this.selectedAllergies.join(' '),
-        conditions: 'conditions',
+        conditions: this.selectedConditions.join(' '),
       })
     );
   }
 
   public onAllergyChange(allergy: Allergy): void {
     if (allergy.isSelected) {
-      this.selectedAllergies.push(allergy.name)
+      this.selectedAllergies.push(allergy.name);
     } else {
       this.selectedAllergies.forEach((name, index) => {
         if (name === allergy.name) {
           this.selectedAllergies.splice(index, 1);
-        } 
-      })
+        }
+      });
     }
-    console.log(this.selectedAllergies)
+  }
+
+  public onConditionChange(condition: Condition): void {
+    if (condition.isSelected) {
+      this.selectedConditions.push(condition.name);
+    } else {
+      
+      this.selectedConditions.forEach((name, index) => {
+        if (name === condition.name) {
+          this.selectedConditions.splice(index, 1);
+        }
+      });
+    }
   }
 
   public onBackClick(): void {

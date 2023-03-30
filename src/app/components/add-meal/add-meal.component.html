@@ -11,6 +11,7 @@
         class="form-control form-input"
         placeholder="Meal name"
         name="name"
+        maxlength="50"
         #name="ngModel"
         [(ngModel)]="mealName"
         required
@@ -26,6 +27,7 @@
         class="form-control"
         name="ingredients"
         #ingredients="ngModel"
+        maxlength="250"
         [(ngModel)]="ingredientArr"
         required
       ></textarea>
@@ -40,6 +42,7 @@
       <textarea
         class="form-control"
         name="description"
+        maxlength="250"
         #description="ngModel"
         [(ngModel)]="mealDesc"
       ></textarea>
