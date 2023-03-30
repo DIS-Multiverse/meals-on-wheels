@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { faCarrot } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,7 +13,7 @@ import { MealService } from '../../services/meal.service';
   styleUrls: ['./add-meal.component.css'],
 })
 export class AddMealComponent {
-  @ViewChild('addMealForm') form! : NgForm;
+  @ViewChild('addMealForm') form!: NgForm;
   public carrotIcon = faCarrot;
   public allergies: string[] = Allergies;
   public mealTypes: string[] = MealTypes;
@@ -47,7 +47,7 @@ export class AddMealComponent {
   private createMeal(meal: Meal) {
     this.mealService.createMeal(meal).subscribe(() => {
       this.successView = true;
-      this.form.reset()
+      this.form.reset();
     });
   }
 }

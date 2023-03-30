@@ -2,32 +2,61 @@
   <fa-icon [icon]="addUserIcon" class="nav-link-icon"></fa-icon> Add New
   Customer
 </h2>
-<form class="border-styling">
-  <div class="form-group">
-    <label>Email address:</label>
-    <input type="email" class="form-control form-input" placeholder="Enter email" />
-  </div>
+<form (ngSubmit)="onSubmit()" #addUserForm="ngForm" class="border-styling">
   <div class="form-group">
     <label>First Name:</label>
-    <input type="text" class="form-control form-input" placeholder="First name" />
+    <input
+      type="text"
+      class="form-control form-input"
+      placeholder="First name"
+      name="fName"
+      #fName="ngModel"
+      [(ngModel)]="firstName"
+    />
   </div>
   <div class="form-group">
     <label>Last Name:</label>
-    <input type="text" class="form-control form-input" placeholder="Last name" />
+    <input
+      type="text"
+      class="form-control form-input"
+      placeholder="Last name"
+      name="lName"
+      #lName="ngModel"
+      [(ngModel)]="lastName"
+    />
   </div>
   <div class="form-group">
     <label>Address:</label>
-    <input type="text" class="form-control form-input" placeholder="Address" />
+    <input
+      type="text"
+      class="form-control form-input"
+      placeholder="Address"
+      name="address"
+      #address="ngModel"
+      [(ngModel)]="formAddress"
+    />
   </div>
   <div class="form-group age">
     <label>Age:</label>
-    <input type="number" class="form-control form-input" placeholder="Age" />
+    <input
+      type="number"
+      class="form-control form-input"
+      placeholder="Age"
+      name="age"
+      #age="ngModel"
+      [(ngModel)]="formAge"
+    />
   </div>
   <div class="form-group">
     <label>Allergies:</label>
     <div class="check-boxes">
       <div *ngFor="let allergy of allergies" class="form-check">
-        <input class="form-check-input" type="checkbox" />
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="{{ allergy }}"
+          ngModel
+        />
         <label class="form-check-label">
           {{ allergy }}
         </label>
@@ -38,10 +67,15 @@
     <label>Conditions:</label>
     <small>Select all relevant options</small>
     <div class="check-boxes">
-      <div *ngFor="let conditon of conditions" class="form-check">
-        <input class="form-check-input" type="checkbox" />
+      <div *ngFor="let condition of conditions" class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="{{ condition }}"
+          ngModel
+        />
         <label class="form-check-label">
-          {{ conditon }}
+          {{ condition }}
         </label>
       </div>
     </div>
